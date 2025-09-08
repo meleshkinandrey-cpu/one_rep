@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+  <title>Оценка по заявке</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta name="GENERATOR" content="MSHTML 11.00.10570.1001" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .content-wrapper {
+      border: 1px solid #dddddd;
+      width: 650px;
+      background-color: #ffffff;
+      border-collapse: collapse;
+    }
+
+    .grade-cell {
+      padding-bottom: 0px;
+      font-size: 0px;
+      color: #eeeeee;
+      text-align: center;
+    }
+
+    .grade-cell img {
+      text-align: center;
+      padding-bottom: 5px;
+    }
+
+    .grade-label {
+      font-size: 12px;
+      color: #666666;
+      display: block;
+    }
+
+    .WordSection1 {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .step {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+      margin: 0 auto;
+      border: 0;
+    }
+
+    .table-blue-block {
+      background-color: #eff6fe;
+      font-size: 14px;
+      border-radius: 5px;
+      /*border: 1px solid #d4e8ff;*/
+    }
+
+    .table-solution {
+      font-size: 14px;
+      background-color: #dff7df;
+      border-radius: 5px;
+      /*border: 1px solid #cffccf;*/
+    }
+
+    .table-grade {
+      color: #2a5298;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .tabtd1 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 13px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    .tabtd2 {
+      font-size: 13px;
+      padding-top: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: #3f3f3f;
+    }
+
+    .tabtd3 {
+      font-size: 13px;
+      padding-top: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 8px;
+      color: #3f3f3f;
+    }
+
+    .divider {
+      font-size: 2px;
+      padding-bottom: 3px;
+      border-bottom: #444 1px dashed;
+    }
+
+    .sign {
+      padding-left: 10px;
+      font-size: 13px;
+      color: #2a5298;
+    }
+
+    .sign A {
+      text-decoration: underline;
+      color: #2a5298;
+    }
+
+    .bottom {
+      font-size: 11px;
+      border-top: #dddddd 1px solid;
+      color: #888888;
+      padding: 15px;
+      background-color: #f8f8f8;
+    }
+
+    .break {
+      font-size: 15px;
+    }
+
+    .pm,
+    .pm a,
+    .pm img {
+      margin: 0px;
+      padding: 0px;
+      font-size: 10px;
+      border: 0;
+    }
+
+    .title_td {
+      color: #ffffff;
+      padding: 15px 20px;
+    }
+
+    .title_div {
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <table style="background-color: #f5f5f5" cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tbody>
+      <tr>
+        <td style="
+              padding-bottom: 20px;
+              padding-top: 20px;
+              padding-left: 10px;
+              padding-right: 10px;
+            " valign="top" align="center">
+          <table role="presentation" class="content-wrapper" cellspacing="0" cellpadding="0" width="650" border="0">
+            <tbody>
+              <tr>
+                <td class="title_td" style="background-color: #2a5298">
+                  <div class="title_div">
+                    Оценка по заявке № {?Call.NumberString} -
+                    {?Call.GradeString}
+                  </div>
+                  <div style="font-size: 14px">
+                    <b>Название: </b>{?Call.CallSummaryName}
+                  </div>
+                </td>
+              </tr>
+              <!-- Основное содержимое -->
+              <tr>
+                <td style="
+                      padding-bottom: 10px;
+                      padding-top: 20px;
+                      padding-left: 30px;
+                      padding-right: 30px;
+                    ">
+                  <!-- Кнопка -->
+                  <table cellspacing="0" cellpadding="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="pm" width="50%">
+                                  <a href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}"><img
+                                      src="https://helpdesk.stepcon.ru/images/call_mini.png" />
+                                  </a>
+                                </td>
+                                <td valign="middle" align="right">
+                                  <!-- Оценка -->
+                                  <table role="presentation" class="table-grade" cellspacing="0" cellpadding="0"
+                                    border="0" vAlign="center">
+                                    <tbody>
+                                      <tr>
+                                        <td valign="middle" align="right">
+                                          <span><b>Оценка по заявке -
+                                              &nbsp;&nbsp;&nbsp;</b></span>
+                                        </td>
+                                        <td>
+                                          <img
+                                            src="https://helpdesk.stepcon.ru/images/{?Call.GradeString}.png" />&nbsp;&nbsp;&nbsp;
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="break">&nbsp;</div>
+
+                          <!-- Заявка -->
+
+                          <table class="table-blue-block" cellspacing="0" cellpadding="0" width="100%" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="tabtd1" style="color: #2a5298">
+                                  Заявка № {?Call.NumberString}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="tabtd2">
+                                  <b>{?Call.CallSummaryName}</b>
+                                  <div class="divider">&nbsp;</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="tabtd3">
+                                  {?Call.HTMLDescription}
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="break">&nbsp;</div>
+                          
+                          <!-- Решение -->
+
+                          <table class="table-solution" cellspacing="0" cellpadding="0" width="100%" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="tabtd1" style="color: #1e8a1e">
+                                  Решение
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="tabtd2">
+                                  {?Call.HTMLSolution}
+                                  <div class="divider">&nbsp;</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="tabtd3">
+                                  <b>Заявку выполнил:</b>
+                                  {?Call.AccomplisherFullName}
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="break">&nbsp;</div>
+                          
+                          <!-- Дополнительная информация -->
+
+                          <table class="table-blue-block" cellspacing="0" cellpadding="0" width="100%" border="0">
+                            <tbody>
+                              <tr>
+                                <td class="tabtd1" style="color: #2a5298">
+                                  Дополнительная информация о заявке
+                                  <div class="divider">&nbsp;</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="tabtd3">
+                                  <div><strong>Клиент:</strong>{?Call.ClientFullName}</div>
+                                  <div style="margin-top: 5px"><strong>Должность:</strong>{?Call.ClientPositionName}</div>
+                                  <div style="margin-top: 5px"><strong>Подразделение:</strong>{?Call.ClientSubdivisionName}</div>
+                                  <div style="margin-top: 5px"><strong>Обещанный срок решения:</strong>{?Call.DatePromisedString}</div>
+                                  <div style="margin-top: 5px"><b>Заявка создана:</b>{?Call.DateRegisteredString}</div>
+                                  <div style="margin-top: 5px"><b>Заявка взята в работу:</b>{?Call.DateOpenedString}</div>
+                                  <div style="margin-top: 5px"><b>Заявка выполнена:</b>{?Call.DateAccomplishedString}</div>
+                                  <div style="margin-top: 5px"><strong>Сервис:</strong>{?Call.ServiceName}</div>
+                                  <div style="margin-top: 5px"><strong>Услуга:</strong>{?Call.ServiceAttendanceFullName}</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="break">&nbsp;</div>
+                          
+                          <!-- Подпись -->
+                          
+                          <div class="sign">
+                            <div>С уважением,<br />Служба ИТ поддержки.</div>
+                            <br />
+                            <div style="font-size: 13px">
+                              Также вы можете обратиться в службу поддержки
+                              через
+                              <a href="{?Call.WebServerAddress}">веб-интерфейс</a>.
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <!-- Подвал -->
+              <tr>
+                <td class="bottom" align="center">
+                  <p>© 2025 Служба поддержки. Все права защищены.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
