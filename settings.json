@@ -1,0 +1,20 @@
+{
+  "html.format.indentInnerHtml": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "prettier.requireConfig": false,
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#222222", // Фон активной вкладки
+    "tab.inactiveBackground": "#505550", // Фон неактивных вкладок
+    "tab.activeForeground": "#e6b354", // Текст активной вкладки
+    "tab.inactiveForeground": "#bbbbbb", // Текст неактивных вкладок
+    "tab.border": "#e0e0e0", // Граница между вкладками
+    "tab.activeBorder": "#222222", // Нижняя граница активной вкладки
+    "tab.activeBorderTop": "#f5faf5", // Верхняя граница активной вкладки (опционально)
+    "tab.hoverBackground": "#b2dfdb", // Фон при наведении
+    "tab.unfocusedActiveBorder": "#80cbc4" // Граница активной вкладки, когда окно не в фокусе
+  }
+}
