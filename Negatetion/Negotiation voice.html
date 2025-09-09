@@ -63,7 +63,7 @@
       margin: 0 auto;
       border: 0;
     }
-
+  
     .table-blue-block {
       background-color: #eff6fe;
       font-size: 14px;
@@ -76,7 +76,8 @@
       
       padding-left: 15px;
       padding-right: 15px;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
     }
 
     .tabtd2 {
@@ -135,8 +136,9 @@
     }
 
     .title_td {
+      text-align: left;
       color: #ffffff;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px 10px 0 0;
     }
 
@@ -149,29 +151,33 @@
     }
 
     .neg-table {
-      border: 1px solid #d4e8ff;
-      background-color: #eff6fe;
+      text-align: left;
+      border: 1px solid #e2e8f0;
+      /* border: 1px solid #d4e8ff; */
+      background-color: #f8fafc;
       font-size: 13px;
       color: #333333;
-      padding: 10px;
+      padding: 10px 20px;
       border-radius: 10px;
+      line-height: 1.7;
     }
 
     .neg-table td {
       /* border-bottom: 2px solid #ffffff; */
       padding-top: 7px;
-      padding-bottom: 4px;
-      padding-left: 7px;
+      /* padding-bottom: 4px;
+      padding-left: 7px; */
     }
 
     .neg-table STRONG {
       font-size: 13px;
       font-weight: 600;
     }
-    .neg-button {
+    .img-neg-button {
     width: 200px;
     }
     .sign {
+      text-align: left;
       padding-left: 10px;
       font-size: 14px;
       color: #2a5298;
@@ -233,20 +239,20 @@
                     <tbody>
                       <tr>
                         <td>
-                          <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                          <table class="table-button" cellspacing="0" cellpadding="0" width="100%" border="0">
                             <tbody>
                               <tr>
                                 <td class="pm" align="right">
                                   <a
                                     href="mailto:HelpDesk@stepcon.ru?subject=Согласование%20{?Negotiation.NegotiationUrl}%20по%20заявке%20{?Negotiation.CallNumberString}{?Negotiation.RFCNumberString}%20Голос:#Согласовать&amp;body=Комментарий:">
-                                    <img class="neg-button"
-                                      src="https://helpdesk.stepcon.ru/images/500-agree-button.png" /></a>
+                                    <img class="img-neg-button"
+                                      src="https://helpdesk.stepcon.ru/images/button-agree.png" /></a>
                                 </td>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td width="10%">&nbsp;</td>
                                 <td class="pm" align="left">
                                   <a
                                     href="mailto:HelpDesk@stepcon.ru?subject=Согласование%20{?Negotiation.NegotiationUrl}%20по%20заявке%20{?Negotiation.CallNumberString}{?Negotiation.RFCNumberString}%20Голос:#Отклонить&amp;body=Обязательно напишите комментарий к своему голосу!%0AКомментарий:">
-                                    <img class="neg-button"
+                                    <img class="img-neg-button"
                                     src="https://helpdesk.stepcon.ru/images/button-reject.png" /></a>
                                 </td>
                               </tr>
@@ -325,7 +331,7 @@
                           <table cellspacing="0" cellpadding="0" width="100%" border="0">
                             <tbody>
                               <tr>
-                                <td align="center">
+                                <td class="pm" align="center">
                                   <a href="{?Negotiation.NegotiationUrl}">
                                     <img src="https://helpdesk.stepcon.ru/images/call_mini.png " /></a>
                                 </td>
