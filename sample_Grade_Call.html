@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оценка по заявке</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .email-container {
+      max-width: 650px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #2a5298, #1e3c72);
+      color: white;
+      padding: 25px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .call-link img {
+      height: 40px;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .call-link img:hover {
+      transform: scale(1.05);
+    }
+
+    .grade-box {
+      background: #f0f7ff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #cce5ff;
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .grade-box img {
+      height: 24px;
+      margin-bottom: 6px;
+    }
+
+    .grade-box .label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2a5298;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .card-header {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid;
+    }
+
+    .blue-header {
+      color: #2a5298;
+      border-color: #b3d1ff;
+    }
+
+    .green-header {
+      color: #1e8a1e;
+      border-color: #c8e6c9;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e2e8f0;
+      margin: 12px 0;
+    }
+
+    .info-row {
+      margin: 8px 0;
+      display: flex;
+      gap: 8px;
+    }
+
+    .info-label {
+      font-weight: 600;
+      min-width: 180px;
+      color: #4a5568;
+    }
+
+    .signature {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px dashed #e2e8f0;
+      font-size: 14px;
+      color: #4a5568;
+    }
+
+    .signature a {
+      color: #2a5298;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .signature a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      background: #f1f5f9;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 600px) {
+      .action-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content {
+        padding: 20px;
+      }
+      .header h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Оценка по заявке № {?Call.NumberString}</h1>
+      <p><strong>Название:</strong> {?Call.CallSummaryName}</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Action Bar -->
+      <div class="action-bar">
+        <div class="call-link">
+          <a href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}">
+            <img src="https://helpdesk.stepcon.ru/images/call_mini.png" alt="Открыть заявку" />
+          </a>
+        </div>
+        <div class="grade-box">
+          <img src="https://helpdesk.stepcon.ru/images/{?Call.GradeString}.png" alt="Оценка" />
+          <div class="label">Оценка по заявке</div>
+        </div>
+      </div>
+
+      <!-- Заявка -->
+      <div class="card">
+        <div class="card-header blue-header">Заявка № {?Call.NumberString}</div>
+        <div><strong>{?Call.CallSummaryName}</strong></div>
+        <div class="divider"></div>
+        <div>{?Call.HTMLDescription}</div>
+      </div>
+
+      <!-- Решение -->
+      <div class="card">
+        <div class="card-header green-header">Решение</div>
+        <div>{?Call.HTMLSolution}</div>
+        <div class="divider"></div>
+        <div><strong>Заявку выполнил:</strong> {?Call.AccomplisherFullName}</div>
+      </div>
+
+      <!-- Дополнительная информация -->
+      <div class="card">
+        <div class="card-header blue-header">Дополнительная информация о заявке</div>
+        <div class="info-row"><span class="info-label">Клиент:</span> {?Call.ClientFullName}</div>
+        <div class="info-row"><span class="info-label">Должность:</span> {?Call.ClientPositionName}</div>
+        <div class="info-row"><span class="info-label">Подразделение:</span> {?Call.ClientSubdivisionName}</div>
+        <div class="info-row"><span class="info-label">Обещанный срок решения:</span> {?Call.DatePromisedString}</div>
+        <div class="info-row"><span class="info-label">Заявка создана:</span> {?Call.DateRegisteredString}</div>
+        <div class="info-row"><span class="info-label">Заявка взята в работу:</span> {?Call.DateOpenedString}</div>
+        <div class="info-row"><span class="info-label">Заявка выполнена:</span> {?Call.DateAccomplishedString}</div>
+        <div class="info-row"><span class="info-label">Сервис:</span> {?Call.ServiceName}</div>
+        <div class="info-row"><span class="info-label">Услуга:</span> {?Call.ServiceAttendanceFullName}</div>
+      </div>
+
+      <!-- Подпись -->
+      <div class="signature">
+        <p>С уважением,<br><strong>Служба ИТ-поддержки</strong></p>
+        <p>Также вы можете обратиться в службу поддержки через <a href="{?Call.WebServerAddress}">веб-интерфейс</a>.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 Служба поддержки. Все права защищены.</p>
+    </div>
+  </div>
+</body>
+</html>
