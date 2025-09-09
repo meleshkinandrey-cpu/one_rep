@@ -15,15 +15,6 @@
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .blue-header {
-            border-bottom: #b3d1ff 2px solid;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-
-            color: #2a5298;
-        }
-
         .content-wrapper {
             border: 1px solid #dddddd;
             width: 650px;
@@ -37,6 +28,7 @@
             border: 1px solid #e2e8f0;
             padding-left: 10px;
             padding-right: 10px;
+            font-size: 14px;
         }
 
         .card-header {
@@ -44,20 +36,26 @@
             font-weight: 600;
             text-transform: uppercase;
             text-indent: 5px;
+            width: 100%;
+
             /* padding: 5px; */
         }
 
-        .blue-header {
-            color: #2a5298;
-            border-bottom: #b3d1ff 2px solid;
-            
-            
-        }
         .card-body {
             font-size: 14px;
             color: #333333;
             
         }
+
+        .blue-header {
+            color: #2a5298;
+            border-bottom: #b3d1ff 2px solid;
+            width: 100%;
+            height: 28px;
+            
+            
+        }
+     
 
         .green-header {
             color: #1e8a1e;
@@ -67,24 +65,6 @@
         .yellow-header {
             color: #d8d401;
             border-color: #e6e6c8;
-        }
-
-        .grade-cell {
-            padding-bottom: 0px;
-            font-size: 0px;
-            color: #eeeeee;
-            text-align: center;
-        }
-
-        .grade-cell img {
-            text-align: center;
-            padding-bottom: 5px;
-        }
-
-        .grade-label {
-            font-size: 12px;
-            color: #666666;
-            display: block;
         }
 
         .WordSection1 {
@@ -102,55 +82,16 @@
             border: 0;
         }
 
-        .table-blue-block {
-            background-color: #eff6fe;
-            font-size: 14px;
-            border-radius: 5px;
-            border: 1px solid #d4e8ff;
-        }
+       
 
-        .tabtd1 {
-            /* text-transform: uppercase; */
-
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-
-        .tabtd2 {
-            font-size: 13px;
-            padding-top: 0px;
-            padding-left: 15px;
-            padding-right: 15px;
-            color: #333333;
-        }
-
-        .tabtd3 {
-            font-size: 13px;
-            padding-top: 5px;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-bottom: 8px;
-            color: #333333;
-        }
 
         .divider {
-            font-size: 2px;
+            font-size: 1px;
             padding-bottom: 3px;
             /* BORDER-bottom: #fff 2px solid; */
         }
 
-        .sign {
-            padding-left: 10px;
-            font-size: 14px;
-            color: #2a5298;
-        }
-
-        .sign A {
-            text-decoration: underline;
-            color: #2a5298;
-        }
+       
 
         .bottom {
             font-size: 12px;
@@ -200,14 +141,7 @@
             color: #2a5298;
         }
 
-        .neg-title {
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        .break {
-            font-size: 15px;
-        }
+     
     </style>
 </head>
 
@@ -242,16 +176,12 @@
                             </tr>
                             <!-- Основное содержимое -->
                             <tr>
-                                <td style="
-                      padding-bottom: 10px;
-                      padding-top: 20px;
-                      padding-left: 30px;
-                      padding-right: 30px;
-                    ">
+                                <td style="padding-bottom: 10px;padding-top: 20px;padding-left: 30px;padding-right: 30px;">
+                                    
                                     <!-- Сообщение -->
 
-                                    <table class="card" width="100%" cellpadding="0" cellspacing="0"
-                                    style="padding: 15px">
+                                    <table class="card" width="100%" cellpadding="0" cellspacing="0" 
+                                        style="padding-top: 15px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px;">
                                         <tbody>
                                             <tr>
                                                 <td class="card-header" align="left">
@@ -259,8 +189,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td  align="left">
-                                                    <div class="card-body">{?Negotiation.CallFinalMessageString}</div>
+                                                <td align="left">
+                                                    <div class="card-body" style="padding-top: 10px;">&nbsp;{?Negotiation.CallFinalMessageString}</div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -273,8 +203,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <table class="table-button" 
-                                                        width="100%" border="0">
+                                                    <table class="table-button" width="100%" border="0">
                                                         <tbody>
                                                             <tr>
                                                                 <td class="pm" align="right">
@@ -295,52 +224,52 @@
 
                                                     <!-- Информация о согласовании -->
 
-                                                    <table class="card" width="100%" style="padding: 15px">
+                                                    <table class="card" cellpadding="0" cellspacing="0" width="100%" style="padding: 15px" align="left">
                                                         <tbody>
                                                             <tr>
-                                                                <td  colspan="2" align="center">
-                                                                    <div class="blue-header">
+                                                                <td class="card-header" colspan="2" align="center">
+                                                                    <div class="blue-header" style="margin-bottom: 10px;">
                                                                         Информация о согласовании
                                                                     </div>
                                                                 </td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>ТЕМА СОГЛАСОВАНИЯ:</strong></td>
+                                                                <td><span class="span-name" >ТЕМА СОГЛАСОВАНИЯ:</span></td>
                                                                 <td>{?Negotiation.Name}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>СЕРВИС:</strong></td>
+                                                                <td><span class="span-name" >СЕРВИС:</span></td>
                                                                 <td>
                                                                     {?Negotiation.CallServiceAttendanceFullName}
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>КРАТКОЕ ОПИСАНИЕ:</strong></td>
+                                                                <td><span class="span-name" >КРАТКОЕ ОПИСАНИЕ:</span></td>
                                                                 <td>{?Negotiation.CallCallSummaryName}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>ОПИСАНИЕ:</strong></td>
+                                                                <td><span class="span-name" >ОПИСАНИЕ:</span></td>
                                                                 <td>{?Negotiation.CallDescription}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>КЛИЕНТ:</strong></td>
+                                                                <td><span class="span-name" >КЛИЕНТ:</span></td>
                                                                 <td>{?Negotiation.CallClientFullName}</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <strong>ПОДРАЗДЕЛЕНИЕ КЛИЕНТА:</strong>
+                                                                    <span class="span-name" >ПОДРАЗДЕЛЕНИЕ КЛИЕНТА:</span>
                                                                 </td>
                                                                 <td>
                                                                     {?Negotiation.CallClientSubdivisionName}
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>ДОЛЖНОСТЬ КЛИЕНТА:</strong></td>
+                                                                <td><span class="span-name" >ДОЛЖНОСТЬ КЛИЕНТА:</span></td>
                                                                 <td>{?Negotiation.CallClientPositionName}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>ТЕЛЕФОН КЛИЕНТА:</strong></td>
+                                                                <td><span class="span-name" >ТЕЛЕФОН КЛИЕНТА:</span></td>
                                                                 <td>{?Negotiation.CallClientPhone}</td>
                                                             </tr>
                                                         </tbody>
@@ -356,7 +285,7 @@
                                                                 <td class="pm" align="center">
                                                                     <a href="{?Negotiation.NegotiationUrl}">
                                                                         <img
-                                                                            src="https://helpdesk.stepcon.ru/images/call_mini.png " /></a>
+                                                                            src="https://helpdesk.stepcon.ru/images/call_mini.png" /></a>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
