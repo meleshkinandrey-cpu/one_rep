@@ -11,7 +11,7 @@
       padding: 0;
       width: 100% !important;
       background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .content-wrapper {
@@ -54,12 +54,13 @@
       border: 0;
     }
 
-    .table-blue-block {
-      BACKGROUND-COLOR: #eff6fe;
-      FONT-SIZE: 14px;
-      border-radius: 5px;
-      /*border: 1px solid #d4e8ff;*/
-
+   .table-blue-block {
+      background: #f8fafc;
+      /* background-color: #eff6fe; */
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      /* border: 1px solid #d4e8ff; */
     }
 
     .tabtd1 {
@@ -95,11 +96,24 @@
 
     }
 
-    .divider {
-
+    .divider-blue {
       font-size: 2px;
       padding-bottom: 3px;
-      border-bottom: #444 1px dashed;
+      /*border-bottom: #444 1px dashed;*/
+      border-bottom: #b3d1ff 2px solid;
+    }
+
+    .divider-green {
+      font-size: 2px;
+      padding-bottom: 3px;
+      /*border-bottom: #444 1px dashed;*/
+      border-bottom:#c8e6c9 2px solid ; 
+    }
+     .divider-grey {
+      font-size: 2px;
+      padding-bottom: 3px;
+      /*border-bottom: #444 1px dashed;*/
+      border-bottom:#dadada 1px solid ; 
     }
 
     .sign {
@@ -114,7 +128,7 @@
     }
 
     .bottom {
-      FONT-SIZE: 11px;
+      FONT-SIZE: 12px;
       BORDER-TOP: #dddddd 1px solid;
       COLOR: #888888;
       PADDING: 15px;
@@ -177,7 +191,7 @@
                   <!-- Кнопка  -->
                   <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
                     <TBODY>
-                      <TR>ы
+                      <TR>
                         <TD>
                           <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
                             <TBODY>
@@ -195,11 +209,13 @@
                             <TBODY>
                               <TR>
                                 <TD class=tabtd1 style="COLOR: #2a5298">Заявка №
-                                  {?Call.NumberString} </TD>
+                                  {?Call.NumberString}
+                                <DIV class=divider-blue>&nbsp;</DIV>
+                              </TD>
                               </TR>
                               <TR>
                                 <TD class=tabtd2><B>{?Call.CallSummaryName}</B>
-                                  <DIV class=divider>&nbsp;</DIV>
+                                  <DIV class=divider-grey>&nbsp;</DIV>
                                 </TD>
                               </TR>
                               <TR>
@@ -216,7 +232,7 @@
                               <TR>
                                 <TD class=tabtd1 style="COLOR: #2a5298">Дополнительная
                                   информация о заявке
-                                  <DIV class=divider>&nbsp;</DIV>
+                                  <DIV class=divider-blue>&nbsp;</DIV>
                                 </TD>
                               </TR>
                               <TR>

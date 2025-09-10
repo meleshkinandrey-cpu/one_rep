@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<style>
+ .content-wrapper {
+      border: 1px solid #dddddd;
+      width: 650px;
+      background-color: #ffffff;
+      border-collapse: collapse;
+    }
+
+     .title_td {
+      color: #ffffff;
+      padding: 15px 20px;
+    }
+
+    .title_div {
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: bold;
+
+    }
+
+</style>
+<HEAD>
+    <TITLE>Задание выполнено</TITLE>
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <META name=GENERATOR content="MSHTML 11.00.10570.1001">
+</HEAD>
+
+<BODY
+    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #f5f5f5">
+    <TABLE
+        style="PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #f5f5f5"
+        cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+            <TR>
+                <TD align=center>
+
+                    <!-- Основной контейнер -->
+
+
+                    <TABLE role=presentation class=content-wrapper cellSpacing=0 cellPadding=0 width=650 border=0>
+                        <TBODY>
+                            <TR>
+                                <TD class=title_td style="BACKGROUND-COLOR: #2a5298">
+                                    <DIV class=title_div>Документы по заданию № {?entity.NumberString} во вложении </DIV>
+
+                                    <DIV style="FONT-SIZE: 14px"><B>Название:</B> {?entity.CallSummaryName}</DIV>
+                                </TD>
+                            </TR>
+
+
+                            <!-- Основное содержимое -->
+
+
+                            <TR>
+                                <TD
+                                    style="PADDING-BOTTOM: 10px; PADDING-TOP: 20px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px">
+                                    <!-- Кнопка -->
+                                    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                        <TBODY>
+                                            <TR>
+                                                <TD align=left><A
+                                                        style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
+                                                        href="{?entity.WebServerAddress}?entityNumber={?entity.NumberString}"><IMG
+                                                            style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
+                                                            src="https://helpdesk.stepcon.ru/images/button_get_work.png "></A>
+                                                </TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE><BR><!-- Основная информация -->
+                                    <TABLE style="BACKGROUND-COLOR: #eff6fe; border-radius: 10px" cellSpacing=0
+                                        cellPadding=0 width="100%" border=0>
+                                        <TBODY>
+                                            <TR>
+                                                <TD
+                                                    style="FONT-SIZE: 14px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px">
+                                                    <DIV
+                                                        style="BORDER-BOTTOM: #fff 2px solid; TEXT-TRANSFORM: uppercase; FONT-WEIGHT: bold; COLOR: #2a5298; PADDING-BOTTOM: 5px">
+                                                        Основная
+                                                        информация </DIV>
+                                                    <DIV style="MARGIN-TOP: 5px"><STRONG>Исполнитель:</STRONG>
+                                                        {?entity.ExecutorFullName}</DIV>
+                                                    <DIV style="FONT-SIZE: 14px; MARGIN-TOP: 5px; COLOR: #333333">
+                                                        <STRONG>Задание
+                                                            связано с заявкой/проблемой:</STRONG>
+                                                        {?entity.entityReferenceString}
+                                                    </DIV>
+                                                </TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE><BR>
+
+                                    <!-- Задание -->
+
+                                    <TABLE style="BACKGROUND-COLOR: #eff6fe; border-radius: 10px" cellSpacing=0
+                                        cellPadding=0 width="100%" border=0>
+                                        <TBODY>
+                                            <TR>
+                                                <TD
+                                                    style="FONT-SIZE: 14px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px">
+                                                    <DIV
+                                                        style="MARGIN-BOTTOM: 5px; TEXT-TRANSFORM: uppercase; FONT-WEIGHT: bold; COLOR: #2a5298">
+                                                        Задание</DIV>
+                                                    <DIV
+                                                        style="BORDER-BOTTOM: #fff 2px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 5px">
+                                                        {?entity.Name}</DIV>
+                                                    <DIV style="MARGIN-TOP: 5px; COLOR: #333333">
+                                                        {?entity.HTMLDescription}
+                                                    </DIV>
+                                                </TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE><BR>
+
+
+
+                                    <!-- Подпись -->
+
+
+                                    <DIV style="MARGIN-LEFT: 5px">
+                                        <DIV style="FONT-SIZE: 14px; COLOR: #2a5298">С уважением,<BR>Служба
+                                            ИТ поддержки. </DIV><BR>
+                                        <DIV style="FONT-SIZE: 13px; COLOR: #2a5298">Также вы можете
+                                            обратиться в службу поддержки через <A
+                                                style="TEXT-DECORATION: underline; COLOR: #2a5298"
+                                                href="{?entity.WebServerAddress}">веб-интерфейс</A>.</DIV>
+                                    </DIV>
+                                </TD>
+                            </TR>
+
+                            <!-- Подвал -->
+
+                            <TR>
+                                <TD
+                                    style="FONT-SIZE: 11px; BORDER-TOP: #dddddd 1px solid; COLOR: #888888; PADDING-BOTTOM: 20px; TEXT-ALIGN: center; PADDING-TOP: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND-COLOR: #f8f8f8">
+                                    ©
+                                    2025 Служба поддержки. Все права защищены.
+                                </TD>
+                            </TR>
+                        </TBODY>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TBODY>
+    </TABLE>
+</BODY>
+
+</HTML>
