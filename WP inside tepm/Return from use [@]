@@ -104,7 +104,7 @@
                                                     style=\"FONT-SIZE: 14px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px\">
                                                     <DIV
                                                         style=\"PADDING-BOTTOM: 5px; BORDER-BOTTOM: #fff 2px solid; MARGIN-BOTTOM: 5px; TEXT-TRANSFORM: uppercase; FONT-WEIGHT: bold; COLOR: #2a5298\">
-                                                        Задание</DIV>
+                                                        Задание " + entity.NumberString + " /DIV>
                                                     <DIV
                                                         style=\"PADDING-BOTTOM: 5px\">
                                                         " + entity.Name + "</DIV>

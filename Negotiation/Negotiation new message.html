@@ -26,36 +26,74 @@
             background: #f8fafc;
             border-radius: 10px;
             border: 1px solid #e2e8f0;
-            padding-left: 10px;
-            padding-right: 10px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .card-header {
-            font-size: 16px;
-            font-weight: 600;
             text-transform: uppercase;
-            text-indent: 5px;
-            width: 100%;
-
+            text-indent: 3px;
+            font-weight: 600;
+            font-size: 13px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 10px;
             /* padding: 5px; */
         }
 
         .card-body {
-            font-size: 14px;
-            color: #333333;
-            
+            text-indent: 5px;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #3f3f3f;
+
+        }
+        .card-body b {
+        font-weight: 600;
+        }
+
+        .card-bottom {
+            text-indent: 5px;
+            font-size: 13px;
+            margin-top: 0px;
+            padding-top: 8px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 11px;
+            color: #3f3f3f;
+
+        }
+
+        .card-bottom div {
+            padding: 6px;
+            border-bottom: 1px solid rgb(219, 219, 219);
+        }
+
+        .span-name {
+            font-weight: 600;
+
+        }
+
+        .divider-blue {
+            font-size: 3px;
+            padding-bottom: 3px;
+            /*border-bottom: #444 1px dashed;*/
+            border-bottom: #b3d1ff 2px solid;
+        }
+
+        .divider-grey {
+            font-size: 3px;
+            padding-bottom: 3px;
+            /*border-bottom: #444 1px dashed;*/
+            border-bottom: #dadada 1px solid;
         }
 
         .blue-header {
             color: #2a5298;
-            border-bottom: #b3d1ff 2px solid;
             width: 100%;
-            height: 28px;
-            
-            
         }
-     
+
 
         .green-header {
             color: #1e8a1e;
@@ -82,16 +120,7 @@
             border: 0;
         }
 
-       
 
-
-        .divider {
-            font-size: 1px;
-            padding-bottom: 3px;
-            /* BORDER-bottom: #fff 2px solid; */
-        }
-
-       
 
         .bottom {
             font-size: 12px;
@@ -125,14 +154,14 @@
             border-bottom: 1px solid #ffffff;
             padding-bottom: 5px;
             margin-bottom: 5px;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .sign {
             text-align: left;
             padding-left: 10px;
-            font-size: 14px;
+            font-size: 13px;
             color: #2a5298;
         }
 
@@ -140,8 +169,6 @@
             text-decoration: underline;
             color: #2a5298;
         }
-
-     
     </style>
 </head>
 
@@ -155,7 +182,7 @@
               padding-left: 10px;
               padding-right: 10px;
             " valign="top" align="center">
-                    
+
                     <!-- Основной контейнер -->
 
                     <table role="presentation" class="content-wrapper" cellspacing="0" cellpadding="0" width="650"
@@ -176,46 +203,53 @@
                             </tr>
                             <!-- Основное содержимое -->
                             <tr>
-                                <td style="padding-bottom: 10px;padding-top: 20px;padding-left: 30px;padding-right: 30px;">
-                                    
+                                <td
+                                    style="padding-bottom: 10px;padding-top: 20px;padding-left: 30px;padding-right: 30px;">
+
                                     <!-- Сообщение -->
 
-                                    <table class="card" width="100%" cellpadding="0" cellspacing="0" 
-                                        style="padding-top: 15px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px;">
+                                    <table class="card" width="100%" cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
                                                 <td class="card-header" align="left">
-                                                    <div  class="blue-header">Сообщение</div>
+                                                    <div class="blue-header">Сообщение</div>
+                                                    <div class="divider-blue">&nbsp;</div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td align="left">
-                                                    <div class="card-body" style="padding-top: 10px;">&nbsp;{?Negotiation.CallFinalMessageString}</div>
+                                                    <div class="card-bottom" style="padding-top: 10px;">
+                                                        &nbsp;{?Negotiation.CallFinalMessageString}</div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                     <div class="break">&nbsp;</div>
 
-                                    <!-- Кнопки согласования -->
+                                    <!-- Основной контент -->
 
-                                    <table cellspacing="0" cellpadding="0" width="100%" border="0" >
+                                    <table cellspacing="0" cellpadding="0" width="100%">
                                         <tbody>
                                             <tr>
                                                 <td>
+
+                                                    <!-- Кнопки согласования -->
+
                                                     <table class="table-button" width="100%" border="0">
                                                         <tbody>
                                                             <tr>
                                                                 <td class="pm" align="right">
                                                                     <a
                                                                         href="mailto:HelpDesk@stepcon.ru?subject=Согласование%20{?Negotiation.NegotiationUrl}%20по%20заявке%20{?Negotiation.CallNumberString}{?Negotiation.RFCNumberString}%20Голос:#Согласовать&amp;body=Комментарий:">
-                                                                        <img src="https://helpdesk.stepcon.ru/images/button-agree.png" /></a>
+                                                                        <img
+                                                                            src="https://helpdesk.stepcon.ru/images/button-agree.png" /></a>
                                                                 </td>
                                                                 <td width="10%">&nbsp;</td>
                                                                 <td class="pm" align="left">
                                                                     <a
                                                                         href="mailto:HelpDesk@stepcon.ru?subject=Согласование%20{?Negotiation.NegotiationUrl}%20по%20заявке%20{?Negotiation.CallNumberString}{?Negotiation.RFCNumberString}%20Голос:#Отклонить&amp;body=Обязательно напишите комментарий к своему голосу!%0AКомментарий:">
-                                                                        <img src="https://helpdesk.stepcon.ru/images/button-reject.png" /></a>
+                                                                        <img
+                                                                            src="https://helpdesk.stepcon.ru/images/button-reject.png" /></a>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -224,58 +258,67 @@
 
                                                     <!-- Информация о согласовании -->
 
-                                                    <table class="card" cellpadding="0" cellspacing="0" width="100%" style="padding: 15px" align="left">
+                                                    <table class="card" cellpadding="0" cellspacing="0" width="100%"
+                                                        align="left">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="card-header" colspan="2" align="center">
-                                                                    <div class="blue-header" style="margin-bottom: 10px;">
+                                                                <td class="card-header" align="center">
+                                                                    <div class="blue-header">
                                                                         Информация о согласовании
                                                                     </div>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="span-name" >ТЕМА СОГЛАСОВАНИЯ:</span></td>
-                                                                <td>{?Negotiation.Name}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="span-name" >СЕРВИС:</span></td>
-                                                                <td>
-                                                                    {?Negotiation.CallServiceAttendanceFullName}
+                                                                    <div class="divider-blue">&nbsp;</div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td><span class="span-name" >КРАТКОЕ ОПИСАНИЕ:</span></td>
-                                                                <td>{?Negotiation.CallCallSummaryName}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="span-name" >ОПИСАНИЕ:</span></td>
-                                                                <td>{?Negotiation.CallDescription}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="span-name" >КЛИЕНТ:</span></td>
-                                                                <td>{?Negotiation.CallClientFullName}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <span class="span-name" >ПОДРАЗДЕЛЕНИЕ КЛИЕНТА:</span>
+                                                                <td class="card-bottom">
+
+                                                                    <div><span class="span-name">Тема согласования:
+                                                                        </span>{?Negotiation.Name}</div>
+                                                                    <div><span class="span-name">Сервис:
+                                                                        </span>{?Negotiation.CallServiceAttendanceFullName}
+                                                                    </div>
+                                                                    <div><span class="span-name">Клиент:
+                                                                        </span>{?Negotiation.CallClientFullName}</div>
+                                                                    <div><span class="span-name">Подразделение клиента:
+                                                                        </span>{?Negotiation.CallClientSubdivisionName}
+                                                                    </div>
+                                                                    <div><span class="span-name">Должность клиента:
+                                                                        </span>{?Negotiation.CallClientPositionName}
+                                                                    </div>
+                                                                    <div style="border: 0; padding-bottom: 0;"><span
+                                                                            class="span-name">Телефон клиента:
+                                                                        </span>{?Negotiation.CallClientPhone}</div>
                                                                 </td>
-                                                                <td>
-                                                                    {?Negotiation.CallClientSubdivisionName}
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="span-name" >ДОЛЖНОСТЬ КЛИЕНТА:</span></td>
-                                                                <td>{?Negotiation.CallClientPositionName}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="span-name" >ТЕЛЕФОН КЛИЕНТА:</span></td>
-                                                                <td>{?Negotiation.CallClientPhone}</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                     <div class="break">&nbsp;</div>
-                                                    <div class="break">&nbsp;</div>
+
+                                                    <!-- Заявка -->
+
+
+                                                    <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                                        <TBODY>
+                                                            <TR>
+                                                                <TD align="center" class=card-header
+                                                                    style="COLOR: #2a5298">Согласование по заявке №
+                                                                    {?Negotiation.CallNumberString}
+                                                                    <DIV class=divider-blue>&nbsp;</DIV>
+                                                                </TD>
+                                                            </TR>
+                                                            <TR>
+                                                                <TD class=card-body>
+                                                                    <B>{?Negotiation.CallCallSummaryName}</B>
+                                                                    <DIV class=divider-grey>&nbsp;</DIV>
+                                                                </TD>
+                                                            </TR>
+                                                            <TR>
+                                                                <TD class=card-bottom>{?Negotiation.CallDescription}
+                                                                </TD>
+                                                            </TR>
+                                                        </TBODY>
+                                                    </TABLE>
+                                                    <DIV class=break>&nbsp;</DIV>
 
                                                     <!-- Кнопка перехода -->
 
@@ -296,9 +339,9 @@
                                                     <!-- Подпись -->
 
                                                     <div class="sign">
-                                                        <div>С уважением,<br />Служба ИТ поддержки.</div>
-                                                        <br />
-                                                        <div style="font-size: 13px">
+                                                        С уважением,<br>Служба ИТ поддержки.
+                                                        <div class="break">&nbsp;</div>
+                                                        <div>
                                                             Также вы можете обратиться в службу поддержки
                                                             через
                                                             <a href="{?Negotiation.WebServerAddress}">веб-интерфейс</a>.

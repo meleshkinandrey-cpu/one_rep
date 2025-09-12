@@ -80,69 +80,77 @@
       text-align: center;
 
     }
+
     .table-grade div {
-    padding-top: 5px;
+      padding-top: 5px;
     }
 
     .tabtd1 {
       text-transform: uppercase;
+      text-indent: 3px;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       padding-left: 15px;
       padding-right: 15px;
       padding-top: 10px;
-      padding-bottom: 5px;
     }
 
     .tabtd2 {
-      font-size: 14px;
-      padding-top: 6px;
+      text-indent: 5px;
+      font-size: 13px;
+      padding-top: 10px;
       padding-left: 15px;
       padding-right: 15px;
       color: #3f3f3f;
     }
 
     .tabtd3 {
-      font-size: 14px;
-      
-      padding-top: 2px;
+      text-indent: 5px;
+      font-size: 13px;
+      margin-top: 0px;
+      padding-top: 8px;
       padding-left: 15px;
       padding-right: 15px;
-      padding-bottom: 5px;
+      padding-bottom: 11px;
       color: #3f3f3f;
-      
-    }
-    .tabtd3 strong {
-    font-weight: 600;
-  }
-     .info-row {
-    margin-bottom: 5px;
+
     }
 
-     .divider {
+    .tabtd3 strong,
+    .tabtd3 b,
+    .tabtd2 b {
+      font-weight: 600;
+    }
+
+    .info-row {
+      margin-bottom: 5px;
+    }
+
+    .divider {
       /* height: 1px; */
       font-size: 3px;
       border-bottom: 1px solid #e2e8f0;
       padding-bottom: 3px;
-     
+
     }
 
     .blue-header {
       /* color: #2a5298; */
-      border-bottom: #b3d1ff 2px solid; 
+      border-bottom: #b3d1ff 2px solid;
       font-size: 2px;
       padding-bottom: 3px;
-       }
+    }
 
     .green-header {
       /* color: #1e8a1e; */
       font-size: 2px;
       padding-bottom: 3px;
-      border-bottom:#c8e6c9 2px solid ; 
+      border-bottom: #c8e6c9 2px solid;
     }
+
     .sign {
       padding-left: 10px;
-      font-size: 14px;
+      font-size: 13px;
       color: #2a5298;
     }
 
@@ -175,7 +183,7 @@
     .title_td {
       color: #ffffff;
       padding: 15px 20px;
-      background: #2a5298 ;
+      background: #2a5298;
       /* background: linear-gradient(135deg, #2a5298, #1e3c72); */
     }
 
@@ -239,10 +247,10 @@
                                     border="0" vAlign="center">
                                     <tbody>
                                       <tr>
-                                       <td>
+                                        <td>
                                           <img
                                             src="https://helpdesk.stepcon.ru/images/{?Call.GradeString}.png" />&nbsp;&nbsp;&nbsp;
-                                            <div>Оценка по заявке</div>
+                                          <div>Оценка по заявке</div>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -267,7 +275,7 @@
                                 <td class="tabtd2">
                                   <b>{?Call.CallSummaryName}</b>
                                   <div class="divider">&nbsp;</div>
-                                  
+
                                 </td>
                               </tr>
                               <tr>
@@ -278,7 +286,7 @@
                             </tbody>
                           </table>
                           <div class="break">&nbsp;</div>
-                          
+
                           <!-- Решение -->
 
                           <table class="table-solution" cellspacing="0" cellpadding="0" width="100%" border="0">
@@ -293,7 +301,7 @@
                                 <td class="tabtd2">
                                   {?Call.HTMLSolution}
                                   <div class="divider">&nbsp;</div>
-                                  
+
                                 </td>
                               </tr>
                               <tr>
@@ -305,7 +313,7 @@
                             </tbody>
                           </table>
                           <div class="break">&nbsp;</div>
-                          
+
                           <!-- Дополнительная информация -->
 
                           <table class="table-blue-block" cellspacing="0" cellpadding="0" width="100%" border="0">
@@ -320,11 +328,16 @@
                                 <td class="tabtd3">
                                   <div class="info-row"><strong>Клиент:</strong> {?Call.ClientFullName}</div>
                                   <div class="info-row"><strong>Должность:</strong> {?Call.ClientPositionName}</div>
-                                  <div class="info-row"><strong>Подразделение:</strong> {?Call.ClientSubdivisionName}</div>
-                                  <div class="info-row"><strong>Обещанный срок решения:</strong> {?Call.DatePromisedString}</div>
-                                  <div class="info-row"><strong>Заявка создана:</strong> {?Call.DateRegisteredString}</div>
-                                  <div class="info-row"><strong>Заявка взята в работу: </strong>{?Call.DateOpenedString}</div>
-                                  <div class="info-row"><strong>Заявка выполнена:</strong> {?Call.DateAccomplishedString}</div>
+                                  <div class="info-row"><strong>Подразделение:</strong> {?Call.ClientSubdivisionName}
+                                  </div>
+                                  <div class="info-row"><strong>Обещанный срок решения:</strong>
+                                    {?Call.DatePromisedString}</div>
+                                  <div class="info-row"><strong>Заявка создана:</strong> {?Call.DateRegisteredString}
+                                  </div>
+                                  <div class="info-row"><strong>Заявка взята в работу: </strong>{?Call.DateOpenedString}
+                                  </div>
+                                  <div class="info-row"><strong>Заявка выполнена:</strong>
+                                    {?Call.DateAccomplishedString}</div>
                                   <div class="info-row"><strong>Сервис:</strong> {?Call.ServiceName}</div>
                                   <div class="info-row"><strong>Услуга:</strong> {?Call.ServiceAttendanceFullName}</div>
                                 </td>
@@ -332,9 +345,10 @@
                             </tbody>
                           </table>
                           <div class="break">&nbsp;</div>
-                          
+                          <div class="break">&nbsp;</div>
+
                           <!-- Подпись -->
-                          
+
                           <div class="sign">
                             <div>С уважением,<br />Служба ИТ поддержки.</div>
                             <br />
