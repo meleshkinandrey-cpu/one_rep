@@ -45,9 +45,10 @@
       /* border: 1px solid #d4e8ff; */
     }
 
-    .tabtd1 {
+    .card-header {
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 600;
+      mso-font-weight: 600;
       font-size: 13px;
       padding-left: 15px;
       padding-right: 15px;
@@ -57,18 +58,19 @@
 
     }
 
-    .tabtd2 {
+    .card-body {
       font-size: 13px;
       padding-top: 0px;
       padding-left: 15px;
       padding-right: 15px;
       color: #3f3f3f;
+      mso-font-weight: 600;
 
 
 
     }
 
-    .tabtd3 {
+    .card-bottom {
       font-size: 13px;
       padding-top: 5px;
       padding-left: 15px;
@@ -77,7 +79,10 @@
       color: #3f3f3f;
 
     }
-
+    .card-bottom strong {
+     font-weight: 600;
+     mso-font-weight: 600;
+    }
     .divider-blue {
       font-size: 2px;
       padding-bottom: 3px;
@@ -185,18 +190,18 @@
                           <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                             <TBODY>
                               <TR>
-                                <TD class=tabtd1 style="COLOR: #2a5298">Заявка №
+                                <TD class=card-header style="COLOR: #2a5298">Заявка №
                                   {?Call.NumberString}
                                 <DIV class=divider-blue>&nbsp;</DIV>
                               </TD>
                               </TR>
                               <TR>
-                                <TD class=tabtd2><B>{?Call.CallSummaryName}</B>
+                                <TD class=card-body><B>{?Call.CallSummaryName}</B>
                                   <DIV class=divider-grey>&nbsp;</DIV>
                                 </TD>
                               </TR>
                               <TR>
-                                <TD class=tabtd3>{?Call.HTMLDescription}</TD>
+                                <TD class=card-bottom>{?Call.HTMLDescription}</TD>
                               </TR>
                             </TBODY>
                           </TABLE>
@@ -207,13 +212,13 @@
                           <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                             <TBODY>
                               <TR>
-                                <TD class=tabtd1 style="COLOR: #2a5298">Дополнительная
+                                <TD class=card-header style="COLOR: #2a5298">Дополнительная
                                   информация о заявке
                                   <DIV class=divider-blue>&nbsp;</DIV>
                                 </TD>
                               </TR>
                               <TR>
-                                <TD class=tabtd3>
+                                <TD class=card-bottom>
                                   <DIV><STRONG>Клиент:</STRONG>
                                     {?Call.ClientFullName}</DIV>
                                   <DIV style="MARGIN-TOP: 5px"><STRONG>Должность:</STRONG>
