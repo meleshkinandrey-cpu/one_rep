@@ -2,7 +2,7 @@
 <HTML>
 
 <HEAD>
-    <TITLE>Истекло 80% от времени исполнения заявки</TITLE>
+    <TITLE>Назначен исполнитель по заявке</TITLE>
     <META content="text/html; charset=utf-8" http-equiv=Content-Type>
     <META name=GENERATOR content="MSHTML 11.00.10570.1001">
     <STYLE>
@@ -21,24 +21,6 @@
             border-collapse: collapse;
         }
 
-        .grade-cell {
-            PADDING-BOTTOM: 0px;
-            font-size: 0px;
-            color: #eeeeee;
-            TEXT-ALIGN: center;
-        }
-
-        .grade-cell img {
-            text-align: center;
-            padding-bottom: 5px;
-        }
-
-        .grade-label {
-            FONT-SIZE: 12px;
-            COLOR: #666666;
-            DISPLAY: block;
-        }
-
         .WordSection1 {
             width: 100%;
             max-width: 600px;
@@ -54,13 +36,7 @@
             border: 0;
         }
 
-        .table-blue-block {
-            BACKGROUND-COLOR: #eff6fe;
-            FONT-SIZE: 14px;
-            border-radius: 5px;
-            /*border: 1px solid #d4e8ff;*/
 
-        }
 
         .table-yellow-block {
             BACKGROUND-COLOR: #fcf4d4;
@@ -77,49 +53,84 @@
 
         }
 
-        .table-red-block .tabtd1 {
+        .card-red .card-header {
             COLOR: #d63333;
         }
 
-        .tabtd1 {
+        .card {
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+
+        .card-red {
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+
+        .card-header {
+            COLOR: #2a5298;
             text-transform: uppercase;
-            font-weight: bold;
+            text-indent: 3px;
+            font-weight: 600;
             font-size: 13px;
             padding-left: 15px;
             padding-right: 15px;
             padding-top: 10px;
-            padding-bottom: 5px;
-            COLOR: #2a5298;
-
 
         }
 
-        .tabtd2 {
+        .card-body {
+            text-indent: 5px;
             font-size: 13px;
-            padding-top: 0px;
+            padding-top: 10px;
             padding-left: 15px;
             padding-right: 15px;
-            color: #333333;
-
-
+            color: #3f3f3f;
 
         }
 
-        .tabtd3 {
+        .card-body b {
+            font-weight: 600;
+        }
+
+        .card-bottom {
+            text-indent: 5px;
             font-size: 13px;
-            padding-top: 5px;
+            margin-top: 0px;
+            padding-top: 8px;
             padding-left: 15px;
             padding-right: 15px;
-            padding-bottom: 8px;
-            color: #333333;
-
+            padding-bottom: 11px;
+            color: #3f3f3f;
         }
 
         .divider {
 
             font-size: 2px;
             padding-bottom: 3px;
-            border-bottom: #7a7d85 1px dashed;
+            border-bottom: #444 1px dashed;
+        }
+
+        .divider-blue {
+            font-size: 3px;
+            padding-bottom: 3px;
+            border-bottom: #b3d1ff 2px solid;
+        }
+
+        .divider-red {
+            font-size: 3px;
+            padding-bottom: 3px;
+            border-bottom: #ffb3b3 2px solid;
+        }
+
+        .divider-grey {
+            font-size: 3px;
+            padding-bottom: 3px;
+            border-bottom: #dadada 1px solid;
         }
 
         .sign {
@@ -180,10 +191,10 @@
                         <TBODY>
                             <TR>
                                 <TD class=title-td style="BACKGROUND-COLOR: #2a5298">
-                                    <DIV class=title-div>Истекает 80% от времени исполнения заявки №
-                                        {?Call.NumberString} </DIV>
-                                    <DIV style="FONT-SIZE: 14px"><B>Название:
-                                        </B>{?Call.CallSummaryName}</DIV>
+                                    <DIV class=title-div>По вашей заявке № {?Call.NumberString} назначен
+                                        исполнитель </DIV>
+                                    <DIV style="FONT-SIZE: 14px">
+                                        <B>Название:</B> {?Call.CallSummaryName}</DIV>
                                 </TD>
                             </TR><!-- Основное содержимое -->
                             <TR>
@@ -198,94 +209,52 @@
                                                         <TBODY>
                                                             <TR>
                                                                 <TD class=pm align=left><A
-                                                                        style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
                                                                         href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}"><IMG
-                                                                            style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
                                                                             src="https://helpdesk.stepcon.ru/images/call_mini.png "></A>
                                                                 </TD>
                                                             </TR>
                                                         </TBODY>
                                                     </TABLE>
-                                                    <DIV class=break>&nbsp;</DIV><!-- Предупреждение -->
-                                                    <TABLE class=table-red-block cellSpacing=0 cellPadding=0
-                                                        width="100%" border=0>
+                                                    <DIV class=break>&nbsp;</DIV><!-- Информация -->
+                                                    <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                                                         <TBODY>
                                                             <TR>
-                                                                <TD class=tabtd1>Предупреждение! </TD>
-                                                            </TR>
-                                                            <TR>
-                                                                <TD class=tabtd2>Истекает 80% от времени исполнения
-                                                                    заявки!
-                                                                    <DIV class=divider>&nbsp;</DIV>
+                                                                <TD class=card-header>Информация
+                                                                    <DIV class=divider-blue>&nbsp;</DIV>
                                                                 </TD>
                                                             </TR>
                                                             <TR>
-                                                                <TD class=tabtd3><B>Владелец заявки:</B>
-                                                                    {?Call.OwnerFullName}</TD>
+                                                                <TD class=card-bottom><B>Назначенный исполнитель:</B>
+                                                                    {?Call.ExecutorFullName} </TD>
                                                             </TR>
                                                         </TBODY>
                                                     </TABLE>
                                                     <DIV class=break>&nbsp;</DIV><!-- Заявка -->
-                                                    <TABLE class=table-blue-block cellSpacing=0 cellPadding=0
-                                                        width="100%" border=0>
+                                                    <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                                                         <TBODY>
                                                             <TR>
-                                                                <TD class=tabtd1 style="COLOR: #2a5298">Заявка №
-                                                                    {?Call.NumberString} </TD>
-                                                            </TR>
-                                                            <TR>
-                                                                <TD class=tabtd2><B>{?Call.CallSummaryName}</B>
-                                                                    <DIV class=divider>&nbsp;</DIV>
+                                                                <TD class=card-header>Заявка № {?Call.NumberString}
+                                                                    <DIV class=divider-blue>&nbsp;</DIV>
                                                                 </TD>
                                                             </TR>
                                                             <TR>
-                                                                <TD class=tabtd3>{?Call.HTMLDescription}</TD>
-                                                            </TR>
-                                                        </TBODY>
-                                                    </TABLE>
-                                                    <DIV class=break>&nbsp;</DIV><!-- Дополнительная информация -->
-                                                    <TABLE class=table-blue-block cellSpacing=0 cellPadding=0
-                                                        width="100%" border=0>
-                                                        <TBODY>
-                                                            <TR>
-                                                                <TD class=tabtd1 style="COLOR: #2a5298">Дополнительная
-                                                                    информация о заявке
-                                                                    <DIV class=divider>&nbsp;</DIV>
+                                                                <TD class=card-body><B>{?Call.CallSummaryName}</B>
+                                                                    <DIV class=divider-grey>&nbsp;</DIV>
                                                                 </TD>
                                                             </TR>
                                                             <TR>
-                                                                <TD class=tabtd3>
-                                                                    <DIV><STRONG>Клиент:</STRONG>
-                                                                        {?Call.ClientFullName}</DIV>
-                                                                    <DIV style="MARGIN-TOP: 5px">
-                                                                        <STRONG>Должность:</STRONG>
-                                                                        {?Call.ClientPositionName}</DIV>
-                                                                    <DIV style="MARGIN-TOP: 5px">
-                                                                        <STRONG>Подразделение:</STRONG>
-                                                                        {?Call.ClientSubdivisionName}</DIV>
-                                                                    <DIV style="MARGIN-TOP: 5px"><STRONG>Обещанный срок
-                                                                            решения:</STRONG> {?Call.DatePromisedString}
-                                                                    </DIV>
-                                                                    <DIV style="MARGIN-TOP: 5px">
-                                                                        <STRONG>Сервис:</STRONG>{?Call.ServiceName}
-                                                                    </DIV>
-                                                                    <DIV style="MARGIN-TOP: 5px">
-                                                                        <STRONG>Услуга:</STRONG>{?Call.ServiceAttendanceFullName}
-                                                                    </DIV>
+                                                                <TD class=card-bottom>{?Call.HTMLDescription}
                                                                 </TD>
                                                             </TR>
                                                         </TBODY>
                                                     </TABLE>
-                                                    <DIV class=break>&nbsp;</DIV>
-                                                    <DIV class=break>&nbsp;</DIV>
-                                                    
-                                                    <!-- Подпись -->
-
+                                                    <DIV class=break>&nbsp;</DIV><!-- Подпись -->
                                                     <DIV class=sign>
-                                                        <DIV>С уважением,<BR>Служба ИТ поддержки. </DIV><BR>
+                                                        <DIV>С уважением,<BR>Служба ИТ поддержки.</DIV><BR>
                                                         <DIV style="FONT-SIZE: 13px">Также вы можете обратиться в
                                                             службу поддержки через <A
-                                                                href="{?Call.WebServerAddress}">веб-интерфейс</A>.</DIV>
+                                                                href="{?Call.WebServerAddress}">веб-интерфейс</A>.
+                                                        </DIV>
                                                     </DIV>
                                                 </TD>
                                             </TR>
