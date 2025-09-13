@@ -7,37 +7,22 @@
   <META name=GENERATOR content="MSHTML 11.00.10570.1001">
   <STYLE>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       width: 100% !important;
       background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
+
     }
 
     .content-wrapper {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       border: 1px solid #dddddd;
       width: 650px;
       background-color: #ffffff;
       border-collapse: collapse;
     }
 
-    .grade-cell {
-      PADDING-BOTTOM: 0px;
-      font-size: 0px;
-      color: #eeeeee;
-      TEXT-ALIGN: center;
-    }
-
-    .grade-cell img {
-      text-align: center;
-      padding-bottom: 5px;
-    }
-
-    .grade-label {
-      FONT-SIZE: 12px;
-      COLOR: #666666;
-      DISPLAY: block;
-    }
 
     .WordSection1 {
       width: 100%;
@@ -54,69 +39,88 @@
       border: 0;
     }
 
-    .table-blue-block {
-      BACKGROUND-COLOR: #eff6fe;
-      FONT-SIZE: 14px;
-      border-radius: 5px;
-      /*border: 1px solid #d4e8ff;*/
-
-    }
-
-    .table-yellow-block {
-      BACKGROUND-COLOR: #fcfce3;
+    .card {
+      BACKGROUND-COLOR: #fcf4d4;
       FONT-SIZE: 14px;
       border-radius: 5px;
       /*border: 1px solid #fce25d;*/
 
     }
 
-    .table-red-block {
-      BACKGROUND-COLOR: #fff3f3;
-      FONT-SIZE: 14px;
-      /*border: 1px solid #ffcaca;*/
-      border-radius: 5px;
 
+    .card {
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      font-size: 13px;
     }
 
-    .table-red-block .tabtd1 {
-      COLOR: #d63333;
-    }
 
-    .tabtd1 {
+
+    .card-header {
+      COLOR: #2a5298;
       text-transform: uppercase;
-      font-weight: bold;
+      text-indent: 3px;
+      font-weight: 600;
       font-size: 13px;
       padding-left: 15px;
       padding-right: 15px;
       padding-top: 10px;
-      padding-bottom: 5px;
-      COLOR: #2a5298;
-
 
     }
 
-    .tabtd2 {
+    .card-body {
+      text-indent: 5px;
       font-size: 13px;
-      padding-top: 0px;
+      padding-top: 10px;
       padding-left: 15px;
       padding-right: 15px;
       color: #3f3f3f;
 
-
-
     }
 
-    .tabtd3 {
+    .card-body b,
+    .card-bottom b {
+      font-weight: 600;
+    }
+
+    .card-bottom {
+      text-indent: 5px;
       font-size: 13px;
-      padding-top: 5px;
+      margin-top: 0px;
+      padding-top: 8px;
       padding-left: 15px;
       padding-right: 15px;
-      padding-bottom: 8px;
+      padding-bottom: 11px;
       color: #3f3f3f;
-
     }
 
-    .table-yellow-block .td-message {
+    .divider {
+
+      font-size: 2px;
+      padding-bottom: 3px;
+      border-bottom: #444 1px dashed;
+    }
+
+    .divider-blue {
+      font-size: 3px;
+      padding-bottom: 3px;
+      border-bottom: #b3d1ff 2px solid;
+    }
+
+    .divider-red {
+      font-size: 3px;
+      padding-bottom: 3px;
+      border-bottom: #ffb3b3 2px solid;
+    }
+
+    .divider-grey {
+      font-size: 3px;
+      padding-bottom: 3px;
+      border-bottom: #dadada 1px solid;
+    }
+
+    .card .td-message {
       padding-top: 0px;
       padding-bottom: 0px;
       padding-left: 0px;
@@ -126,15 +130,12 @@
       margin-bottom: 0px;
       margin-right: 0px;
       overflow: hidden;
-      
-
     }
 
     .div-message {
       MARGIN-LEFT: -33px;
       TEXT-INDENT: -5px;
       font-size: 14px;
-      
 
     }
 
@@ -152,8 +153,6 @@
       padding-top: 0px;
       margin-top: 0px;
       padding-left: 10px;
-      
-      
     }
 
     .divider {
@@ -245,11 +244,11 @@
                             </TBODY>
                           </TABLE>
                           <DIV class=break>&nbsp;</DIV><!-- Сообщение -->
-                          <TABLE class=table-yellow-block cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                             <TBODY>
                               <TR>
-                                <TD class=tabtd1>Сообщение
-                                  <DIV class=divider>&nbsp;</DIV>
+                                <TD class=card-header>Сообщение
+                                  <DIV class=divider-blue>&nbsp;</DIV>
                                 </TD>
                               </TR>
                               <TR>
@@ -265,19 +264,21 @@
                           <!-- Заявка -->
 
 
-                          <TABLE class=table-blue-block cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                             <TBODY>
                               <TR>
-                                <TD class=tabtd1 style="COLOR: #2a5298">Заявка №
-                                  {?Call.NumberString} </TD>
+                                <TD class=card-header style="COLOR: #2a5298">Заявка №
+                                  {?Call.NumberString}
+                                <DIV class=divider-blue>&nbsp;</DIV>
+                               </TD>
                               </TR>
                               <TR>
-                                <TD class=tabtd2><B>{?Call.CallSummaryName}</B>
-                                  <DIV class=divider>&nbsp;</DIV>
+                                <TD class=card-body><B>{?Call.CallSummaryName}</B>
+                                  <DIV class=divider-grey>&nbsp;</DIV>
                                 </TD>
                               </TR>
                               <TR>
-                                <TD class=tabtd3>{?Call.HTMLDescription}</TD>
+                                <TD class=card-bottom>{?Call.HTMLDescription}</TD>
                               </TR>
                             </TBODY>
                           </TABLE>
