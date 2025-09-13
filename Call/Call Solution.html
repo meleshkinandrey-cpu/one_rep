@@ -97,7 +97,7 @@
 
     /*ТАБЛИЦЫ И ЯЧЕЙКИ БЛОКОВ*/
 
-    .table-blue-block {
+    .card {
       background: #f8fafc;
       /* background-color: #eff6fe; */
       font-size: 14px;
@@ -116,7 +116,7 @@
       border: 1px solid #c3e2ca;
     }
 
-    .tabtd1 {
+    .card-header {
       text-transform: uppercase;
       text-indent: 3px;
       font-weight: 600;
@@ -128,7 +128,7 @@
       
     }
 
-    .tabtd2 {
+    .card-body {
       text-indent: 5px;
       font-size: 13px;
       padding-top: 10px;
@@ -137,7 +137,7 @@
       color: #3f3f3f;
     }
 
-    .tabtd3 {
+    .card-bottom {
       text-indent: 5px;
       font-size: 13px;
       margin-top: 0px;
@@ -147,7 +147,7 @@
       padding-bottom: 11px;
       color: #3f3f3f;
     }
-    .tabtd3 b, .tabtd2 b{
+    .card-bottom b, .card-body b{
     font-weight: 600;
 }
 
@@ -251,13 +251,13 @@ width="100%" border=0>
                   width="100%" border=0>
                     <TBODY>
                     <TR>
-                      <TD class=tabtd1 style="COLOR: #1e8a1e">Решение 
+                      <TD class=card-header style="COLOR: #1e8a1e">Решение 
                         <DIV class=divider-green>&nbsp;</DIV></TD></TR>
                     <TR>
-                      <TD class=tabtd2>{?Call.HTMLSolution} 
+                      <TD class=card-body>{?Call.HTMLSolution} 
                         <DIV class=divider-grey>&nbsp;</DIV></TD></TR>
                     <TR>
-                      <TD class=tabtd3><B>Заявку выполнил:</B> 
+                      <TD class=card-bottom><B>Заявку выполнил:</B> 
                         {?Call.AccomplisherFullName} </TD></TR></TBODY></TABLE>
                   <DIV class=break>&nbsp;</DIV></TD></TR>
                   
@@ -300,32 +300,32 @@ width="100%" border=0>
                   <!-- Заявка -->
 
 
-                  <TABLE class=table-blue-block cellSpacing=0 cellPadding=0 
+                  <TABLE class=card cellSpacing=0 cellPadding=0 
                   width="100%" border=0>
                     <TBODY>
                     <TR>
-                      <TD class=tabtd1 style="COLOR: #2a5298">Заявка № 
+                      <TD class=card-header style="COLOR: #2a5298">Заявка № 
                         {?Call.NumberString} 
                         <DIV class=divider-blue>&nbsp;</DIV></TD></TR>
                     <TR>
-                      <TD class=tabtd2><B>{?Call.CallSummaryName}</B> 
+                      <TD class=card-body><B>{?Call.CallSummaryName}</B> 
                         <DIV class=divider-grey>&nbsp;</DIV></TD></TR>
                     <TR>
-                      <TD class=tabtd3>{?Call.HTMLDescription} 
+                      <TD class=card-bottom>{?Call.HTMLDescription} 
                   </TD></TR></TBODY></TABLE>
                   <DIV class=break>&nbsp;</DIV>
                   
                   <!-- Дополнительная информация -->
 
 
-                  <TABLE class=table-blue-block cellSpacing=0 cellPadding=0 width="100%" border=0>
+                  <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                     <TBODY>
                     <TR>
-                      <TD class=tabtd1 style="COLOR: #2a5298">
+                      <TD class=card-header style="COLOR: #2a5298">
                         Дополнительная информация о заявке 
                         <DIV class=divider-blue>&nbsp;</DIV></TD></TR>
                     <TR>
-                      <TD class="tabtd3">
+                      <TD class="card-bottom">
                         <DIV style="margin-top: 0px; MARGIN-BOTTOM: 5px"><B>За заявку отвечал:</B> {?Call.OwnerFullName} </DIV>
                         <DIV style="MARGIN-BOTTOM: 5px"><B>Должность:</B> {?Call.OwnerPositionName} </DIV>
                         <DIV style="MARGIN-BOTTOM: 5px"><B>Заявка создана: </B>{?Call.DateRegisteredString} </DIV>

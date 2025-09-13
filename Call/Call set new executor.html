@@ -54,7 +54,7 @@
       border: 0;
     }
 
-    .table-blue-block {
+    .card {
       background-color: #eff6fe;
       font-size: 14px;
       border-radius: 5px;
@@ -68,7 +68,7 @@
       /*border: 1px solid #fce25d;*/
     }
 
-    .tabtd1 {
+    .card-header {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 13px;
@@ -79,7 +79,7 @@
       color: #2a5298;
     }
 
-    .tabtd2 {
+    .card-body {
       font-size: 13px;
       padding-top: 0px;
       padding-left: 15px;
@@ -87,7 +87,7 @@
       color: #333333;
     }
 
-    .tabtd3 {
+    .card-bottom {
       font-size: 13px;
       padding-top: 5px;
       padding-left: 15px;
@@ -198,13 +198,13 @@
                           <table class="table-yellow-block" cellspacing="0" cellpadding="0" width="100%" border="0">
                             <tbody>
                               <tr>
-                                <td class="tabtd1">
+                                <td class="card-header">
                                   Информация
                                   <div class="divider">&nbsp;</div>
                                 </td>
                               </tr>
                               <tr>
-                                <td class="tabtd3">
+                                <td class="card-bottom">
                                   <b>Назначенный исполнитель:</b>
                                   {?Call.ExecutorFullName}
                                 </td>
@@ -213,21 +213,21 @@
                           </table>
                           <div class="break">&nbsp;</div>
                           <!-- Заявка -->
-                          <table class="table-blue-block" cellspacing="0" cellpadding="0" width="100%" border="0">
+                          <table class="card" cellspacing="0" cellpadding="0" width="100%" border="0">
                             <tbody>
                               <tr>
-                                <td class="tabtd1">
+                                <td class="card-header">
                                   Заявка № {?Call.NumberString}
                                 </td>
                               </tr>
                               <tr>
-                                <td class="tabtd2">
+                                <td class="card-body">
                                   <b>{?Call.CallSummaryName}</b>
                                   <div class="divider">&nbsp;</div>
                                 </td>
                               </tr>
                               <tr>
-                                <td class="tabtd3">
+                                <td class="card-bottom">
                                   {?Call.HTMLDescription}
                                 </td>
                               </tr>
