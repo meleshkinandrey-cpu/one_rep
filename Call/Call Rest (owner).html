@@ -2,7 +2,7 @@
 <HTML>
 
 <HEAD>
- <TITLE>Истек срок выполнения заявки</TITLE>
+ <TITLE>Восстановление заявки</TITLE>
  <META content="text/html; charset=utf-8" http-equiv=Content-Type>
  <META name=GENERATOR content="MSHTML 11.00.10570.1001">
  <STYLE>
@@ -41,24 +41,35 @@
 
 
   .card-red .card-header {
-   COLOR: #d63333;
+   COLOR: #d61111;
   }
 
   .card {
-   background: #f8fafc;
+   background: #f7fbff;
    border-radius: 10px;
-   border: 1px solid #e2e8f0;
+   border: 1px solid #b3d1ff;
    font-size: 13px;
   }
 
-   .card-red {
-   background: #fff8f8;
+  .card-red {
+   background: #f8fafc;
    border-radius: 10px;
    border: 1px solid #ffb3b3;
    font-size: 13px;
   }
 
+  .card-green {
+
+   font-size: 13px;
+   background-color: #f9fff7;
+   /* background: #f8fafc; */
+   border-radius: 10px;
+   /*border: 1px solid #cffccf;*/
+   border: 1px solid #c3e2ca;
+  }
+
   .card-header {
+   COLOR: #2a5298;
    text-transform: uppercase;
    text-indent: 3px;
    font-weight: 600;
@@ -95,6 +106,40 @@
    color: #3f3f3f;
   }
 
+  .card .td-message {
+   padding-top: 0px;
+   padding-bottom: 0px;
+   padding-left: 0px;
+   padding-right: 0px;
+   margin-left: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-right: 0px;
+   overflow: hidden;
+  }
+
+  .div-message {
+   MARGIN-LEFT: -33px;
+   TEXT-INDENT: -5px;
+   font-size: 13px;
+
+  }
+
+  .div-message br {
+   line-height: 1;
+   font-size: 1px
+  }
+
+
+  .div-message ul,
+  .div-message li,
+  .div-message div {
+   display: block;
+   list-style-type: none;
+   padding-top: 0px;
+   margin-top: 0px;
+   padding-left: 10px;
+  }
 
   .divider-blue {
    font-size: 3px;
@@ -112,6 +157,13 @@
    font-size: 3px;
    padding-bottom: 3px;
    border-bottom: #dadada 1px solid;
+  }
+
+  .divider-green {
+   font-size: 3px;
+   padding-bottom: 3px;
+   /*border-bottom: #444 1px dashed;*/
+   border-bottom: #c8e6c9 2px solid;
   }
 
   .sign {
@@ -168,15 +220,12 @@
    <TR>
     <TD style="PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" vAlign=top
      align=center>
-
-     <!-- Основной контейнер -->
-
      <TABLE role=presentation class=content-wrapper cellSpacing=0 cellPadding=0 width=650 border=0>
       <TBODY>
        <TR>
         <TD class=title-td style="BACKGROUND-COLOR: #2a5298">
-         <DIV class=title-div>Истек срок рассмотрения заявки №
-          {?Call.NumberString} </DIV>
+         <DIV class=title-div>Восстановление выполненной заявки №
+          {?Call.NumberString}</DIV>
          <DIV style="FONT-SIZE: 14px"><B>Название:
           </B>{?Call.CallSummaryName}</DIV>
         </TD>
@@ -185,7 +234,7 @@
        <!-- Основное содержимое -->
 
        <TR>
-        <TD style="PADDING-BOTTOM: 10px; PADDING-TOP: 20px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px"><!-- Кнопка  -->
+        <TD style="PADDING-BOTTOM: 10px; PADDING-TOP: 20px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px"><!-- Кнопка -->
          <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
           <TBODY>
            <TR>
@@ -193,27 +242,34 @@
              <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
               <TBODY>
                <TR>
-                <TD class=pm align=left><A
-                  style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
-                  href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}"><IMG
-                   style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
-                   src="https://helpdesk.stepcon.ru/images/call_mini.png "></A></TD>
+                <TD class=pm align=left><A href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}"><IMG
+                   src="https://helpdesk.stepcon.ru/images/call_mini.png "></A>
+                </TD>
                </TR>
               </TBODY>
              </TABLE>
              <DIV class=break>&nbsp;</DIV>
 
-             <!-- Внимание -->
+             <!-- Сообщение -->
 
-             <TABLE class=card-red cellSpacing=0 cellPadding=0 width="100%" border=0>
+
+             <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
               <TBODY>
                <TR>
-                <TD class=card-header>Внимание<DIV class=divider-red>&nbsp;</DIV>
+                <TD class=card-header>Причина восстановления:
+                 <DIV class=divider-blue>&nbsp;</DIV>
                 </TD>
                </TR>
                <TR>
-                <TD class=card-bottom>Заявка № {?Call.NumberString} не взята
-                 в работу в установленные сроки рассмотрения
+                <TD class=td-message>{?Call.HTMLFinalMessageString}
+
+                </TD>
+               </TR>
+               <TR>
+                <TD class=card-bottom style="margin-top: 0;padding-top: 0;">
+                 <DIV class=divider-grey style="margin-bottom: 5px;">&nbsp;</DIV>
+                 <B>&nbsp;Заявку № {?Call.NumberString}
+                  восстановил пользователь:</B> {?Call.ClientFullName}
                 </TD>
                </TR>
               </TBODY>
@@ -227,7 +283,7 @@
                <TR>
                 <TD class=card-header style="COLOR: #2a5298">Заявка №
                  {?Call.NumberString}
-                 <div class="divider-blue">&nbsp;</div>
+                 <DIV class=divider-blue>&nbsp;</DIV>
                 </TD>
                </TR>
                <TR>
@@ -242,30 +298,63 @@
              </TABLE>
              <DIV class=break>&nbsp;</DIV>
 
-             <!-- Дополнительная информация -->
+             <!-- Решение -->
 
+             <TABLE class=card-green cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+               <TR>
+                <TD class=card-header style="COLOR: #1e8a1e">Решение
+                 <DIV class=divider-green>&nbsp;</DIV>
+
+                </TD>
+               </TR>
+               <TR>
+                <TD class=card-body>{?Call.HTMLSolution}
+                 <DIV class=divider-grey>&nbsp;</DIV>
+                </TD>
+               </TR>
+               <TR>
+                <TD class=card-bottom><B>Заявку выполнил:</B>
+                 {?Call.AccomplisherFullName}</TD>
+               </TR>
+              </TBODY>
+             </TABLE>
+             <DIV class=break>&nbsp;</DIV><!-- Дополнительная информация -->
              <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
               <TBODY>
                <TR>
-                <TD class=card-header style="COLOR: #2a5298">Дополнительная информация о заявке
+                <TD class=card-header style="COLOR: #2a5298">Дополнительная
+                 информация по заявке:
                  <DIV class=divider-blue>&nbsp;</DIV>
                 </TD>
                </TR>
                <TR>
                 <TD class=card-bottom>
-                 <DIV><b>Клиент: </b>{?Call.ClientFullName}</DIV>
-                 <DIV style="MARGIN-TOP: 5px"><b>Должность: </b>{?Call.ClientPositionName}</DIV>
-                 <DIV style="MARGIN-TOP: 5px"><b>Подразделение: </b>{?Call.ClientSubdivisionName}</DIV>
-                 <DIV style="MARGIN-TOP: 5px"><b>Обещанный срок решения: </b>{?Call.DatePromisedString}</DIV>
-                 <DIV style="MARGIN-TOP: 5px"><b>Услуга: </b>{?Call.ServiceAttendanceFullName}</DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>За заявку
+                   отвечал:</B> {?Call.OwnerFullName}</DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Должность:</B>
+                  {?Call.OwnerPositionName}</DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Заявка была
+                   зарегистрирована:</B>{?Call.DateRegisteredString}</DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Обещанное время
+                   решения было установлено:</B>{?Call.DatePromisedString}
+                 </DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Заявку выполнил:
+                  </B>{?Call.AccomplisherFullName} </DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Дата выполнения:
+                  </B>{?Call.DateAccomplishedString} </DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Тип заявки:
+                  </B>{?Call.CallTypeFullName} </DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Сервис:
+                  </B>{?Call.ServiceName} </DIV>
+                 <DIV style="MARGIN-BOTTOM: 5px"><B>Услуга:
+                  </B>{?Call.ServiceAttendanceFullName}
+                 </DIV>
                 </TD>
                </TR>
               </TBODY>
              </TABLE>
-             <DIV class=break>&nbsp;</DIV>
-
-             <!-- Подпись -->
-
+             <DIV class=break>&nbsp;</DIV><!-- Подпись -->
              <DIV class=sign>
               <DIV>С уважением,<BR>Служба ИТ поддержки. </DIV><BR>
               <DIV style="FONT-SIZE: 13px">Также вы можете обратиться в
@@ -276,14 +365,11 @@
           </TBODY>
          </TABLE>
         </TD>
-       </TR>
-
-       <!-- Подвал -->
-
+       </TR><!-- Подвал -->
        <TR>
         <TD class=bottom align=center>
-         <div>© 2025 Служба поддержки. Все права
-          защищены.</div>
+         <P>© 2025 Служба поддержки. Все права
+          защищены.</P>
         </TD>
        </TR>
       </TBODY>

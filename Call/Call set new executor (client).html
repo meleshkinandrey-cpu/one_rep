@@ -11,10 +11,11 @@
             padding: 0;
             width: 100% !important;
             background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .content-wrapper {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border: 1px solid #dddddd;
             width: 650px;
             background-color: #ffffff;
@@ -38,24 +39,7 @@
 
 
 
-        .table-yellow-block {
-            BACKGROUND-COLOR: #fcf4d4;
-            FONT-SIZE: 14px;
-            border-radius: 5px;
-            /*border: 1px solid #fce25d;*/
 
-        }
-
-        .table-red-block {
-            BACKGROUND-COLOR: #fff3f3;
-            /*border: 1px solid #ffcaca;*/
-            border-radius: 5px;
-
-        }
-
-        .card-red .card-header {
-            COLOR: #d63333;
-        }
 
         .card {
             background: #f8fafc;
@@ -93,7 +77,11 @@
 
         }
 
-        .card-body b {
+        .card-body b,
+        .card-bottom b,
+        .title-td b,
+        .title-div,
+        .title-div b {
             font-weight: 600;
         }
 
@@ -175,7 +163,7 @@
             padding-bottom: 5px;
             margin-bottom: 5px;
             font-size: 16px;
-            font-weight: bold;
+            
 
         }
     </STYLE>
@@ -194,7 +182,8 @@
                                     <DIV class=title-div>По вашей заявке № {?Call.NumberString} назначен
                                         исполнитель </DIV>
                                     <DIV style="FONT-SIZE: 14px">
-                                        <B>Название:</B> {?Call.CallSummaryName}</DIV>
+                                        <B>Название:</B> {?Call.CallSummaryName}
+                                    </DIV>
                                 </TD>
                             </TR><!-- Основное содержимое -->
                             <TR>
