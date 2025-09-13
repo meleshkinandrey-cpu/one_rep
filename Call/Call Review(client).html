@@ -7,14 +7,16 @@
     <META name=GENERATOR content="MSHTML 11.00.10570.1001">
     <STYLE>
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             width: 100% !important;
             background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
+
         }
 
         .content-wrapper {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border: 1px solid #dddddd;
             width: 650px;
             background-color: #ffffff;
@@ -93,7 +95,7 @@
 
         }
 
-        .card-body b {
+        .card-body b, .card-bottom b {
             font-weight: 600;
         }
 
@@ -227,8 +229,7 @@
                                                         </TBODY>
                                                     </TABLE>
                                                     <DIV class=break>&nbsp;</DIV><!-- Информация -->
-                                                    <TABLE class=card cellSpacing=0 cellPadding=0
-                                                        width="100%" border=0>
+                                                    <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                                                         <TBODY>
                                                             <TR>
                                                                 <TD class=card-header>Информация
@@ -236,14 +237,23 @@
                                                                 </TD>
                                                             </TR>
                                                             <TR>
-                                                                <TD class=card-bottom><B>Ответственный за выполнение:</B>
-                                                                    {?Call.OwnerFullName} </TD>
+                                                                <TD class=card-bottom>
+
+                                                                    <DIV style="MARGIN-TOP: 5px"><B>Ответственный за
+                                                                            выполнение:</B>
+                                                                        {?Call.OwnerFullName} </div>
+                                                                    <DIV style="MARGIN-TOP: 5px"><b>Должность:</b>
+                                                                        {?Call.OwnerPositionName}</DIV>
+                                                                    <DIV style="MARGIN-TOP: 5px"><b>Отдел: </b>
+                                                                        {?Call.OwnerSubdivisionName}</DIV>
+
+                                                                </TD>
+
                                                             </TR>
                                                         </TBODY>
                                                     </TABLE>
                                                     <DIV class=break>&nbsp;</DIV><!-- Заявка -->
-                                                    <TABLE class=card cellSpacing=0 cellPadding=0
-                                                        width="100%" border=0>
+                                                    <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                                                         <TBODY>
                                                             <TR>
                                                                 <TD class=card-header>Заявка № {?Call.NumberString}
