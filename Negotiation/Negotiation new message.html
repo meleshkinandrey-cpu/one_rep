@@ -70,7 +70,40 @@
    padding: 6px;
    border-bottom: 1px solid rgb(219, 219, 219);
   }
+    .card .td-message {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      overflow: hidden;
+    }
 
+    .div-message {
+      MARGIN-LEFT: -33px;
+      TEXT-INDENT: -5px;
+      font-size: 13px;
+
+    }
+
+    .div-message br {
+      line-height: 1;
+      font-size: 1px
+    }
+
+
+    .div-message ul,
+    .div-message li,
+    .div-message div {
+      display: block;
+      list-style-type: none;
+      padding-top: 0px;
+      margin-top: 0px;
+      padding-left: 10px;
+    }
   .span-name {
    font-weight: 600;
 
@@ -191,7 +224,7 @@
        <tr>
         <td class="title-td" style="background-color: #2a5298">
          <div class="title-div">
-          Новое сообщение по согласованию заявки №<a style="text-decoration: underline; color: #ffffff"
+          Новое сообщение по согласованию заявки № <a style="text-decoration: underline; color: #ffffff"
            href="{?Negotiation.NegotiationUrl}">{?Negotiation.CallNumberString}
           </a>
          </div>
@@ -215,10 +248,7 @@
             </td>
            </tr>
            <tr>
-            <td align="left">
-             <div class="card-bottom" style="padding-top: 10px;">
-              &nbsp;{?Negotiation.CallFinalMessageString}</div>
-            </td>
+            <TD class=card-bottom>{?Negotiation.CallFinalMessageString}</TD>
            </tr>
           </tbody>
          </table>
@@ -254,7 +284,7 @@
 
              <!-- Информация о согласовании -->
 
-             <table class="card" cellpadding="0" cellspacing="0" width="100%" align="left">
+             <table class="card" cellpadding="0" cellspacing="0" width="100%" >
               <tbody>
                <tr>
                 <td class="card-header" align="center">
