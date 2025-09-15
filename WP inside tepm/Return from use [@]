@@ -9,12 +9,12 @@
       border-collapse: collapse;
     }
 
-     .title_td {
+     .title-td {
       color: #ffffff;
       padding: 15px 20px;
     }
 
-    .title_div {
+    .title-div {
       border-bottom: 1px solid #ffffff;
       padding-bottom: 5px;
       margin-bottom: 5px;
@@ -45,8 +45,8 @@
                     <TABLE role=presentation class=content-wrapper cellSpacing=0 cellPadding=0 width=650 border=0>
                         <TBODY>
                             <TR>
-                                <TD class=title_td style=\"BACKGROUND-COLOR: #2a5298\">
-                                    <DIV class=title_div>Документы по заданию № " + entity.NumberString + " во вложении </DIV>
+                                <TD class=title-td style=\"BACKGROUND-COLOR: #2a5298\">
+                                    <DIV class=title-div>Документы по заданию № " + entity.NumberString + " во вложении </DIV>
 
                                     <DIV style=\"FONT-SIZE: 14px\"><B>Название:</B> " + entity.Name + "</DIV>
                                 </TD>

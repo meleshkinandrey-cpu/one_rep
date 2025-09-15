@@ -54,7 +54,7 @@
       border: 0;
     }
 
-    .table-blue-block {
+    .card {
       BACKGROUND-COLOR: #eff6fe;
       FONT-SIZE: 14px;
       border-radius: 5px;
@@ -77,16 +77,16 @@
 
     }
 
-    .table-red-block .tabtd1 {
+    .table-red-block .card-header {
       COLOR: #d63333;
     }
 
-    .table-add-info .tabtd3 div {
+    .table-add-info .card-bottom div {
       padding-bottom: 5px;
 
     }
 
-    .tabtd1 {
+    .card-header {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 13px;
@@ -99,7 +99,7 @@
 
     }
 
-    .tabtd2 {
+    .card-body {
       font-size: 13px;
       padding-top: 0px;
       padding-left: 15px;
@@ -110,7 +110,7 @@
 
     }
 
-    .tabtd3 {
+    .card-bottom {
       font-size: 13px;
       padding-top: 5px;
       padding-left: 15px;
@@ -211,44 +211,44 @@
                   <TABLE class=table-red-block cellSpacing=0 cellPadding=0 width="100%" border=0>
                     <TBODY>
                       <TR>
-                        <TD class=tabtd1>По Вашей заявке имеются вопросы, без
+                        <TD class=card-header>По Вашей заявке имеются вопросы, без
                           уточнения которых продолжение работ невозможно! </TD>
                       </TR>
                       <TR>
-                        <TD class=tabtd3>Пожалуйста, откройте заявку в веб-интерфейсе,
+                        <TD class=card-bottom>Пожалуйста, откройте заявку в веб-интерфейсе,
                           и добавьте свой ответ на закладке "Лента", используя кнопку
                           "Добавить". </TD>
                       </TR>
                     </TBODY>
                   </TABLE>
                   <DIV class=break>&nbsp;</DIV><!-- Заявка -->
-                  <TABLE class=table-blue-block cellSpacing=0 cellPadding=0 width="100%" border=0>
+                  <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
                     <TBODY>
                       <TR>
-                        <TD class=tabtd1 style="COLOR: #2a5298">Заявка №
+                        <TD class=card-header style="COLOR: #2a5298">Заявка №
                           {?Call.NumberString} </TD>
                       </TR>
                       <TR>
-                        <TD class=tabtd2><B>{?Call.CallSummaryName}</B>
+                        <TD class=card-body><B>{?Call.CallSummaryName}</B>
                           <DIV class=divider>&nbsp;</DIV>
                         </TD>
                       </TR>
                       <TR>
-                        <TD class=tabtd3>{?Call.HTMLDescription}</TD>
+                        <TD class=card-bottom>{?Call.HTMLDescription}</TD>
                       </TR>
                     </TBODY>
                   </TABLE>
                   <DIV class=break>&nbsp;</DIV><!-- Дополнительная информация -->
-                  <TABLE class="table-blue-block table-add-info" cellSpacing=0 cellPadding=0 width="100%" border=0>
+                  <TABLE class="card table-add-info" cellSpacing=0 cellPadding=0 width="100%" border=0>
                     <TBODY>
                       <TR>
-                        <TD class=tabtd1 style="COLOR: #2a5298">Дополнительная
+                        <TD class=card-header style="COLOR: #2a5298">Дополнительная
                           информация о заявке
                           <DIV class=divider>&nbsp;</DIV>
                         </TD>
                       </TR>
                       <TR>
-                        <TD class=tabtd3>
+                        <TD class=card-bottom>
                           <DIV><STRONG>Текущее состояние:</STRONG>
                             {?Call.EntityStateName}</DIV>
                           <DIV><STRONG>Приоритет:</STRONG> {?Call.PriorityName}</DIV>
@@ -278,8 +278,8 @@
               </TR><!-- Подвал -->
               <TR>
                 <TD class=bottom align=center>
-                  <P>© 2025 Служба поддержки. Все права
-                    защищены.</P>
+                  <div>© 2025 Служба поддержки. Все права
+                    защищены.</div>
                 </TD>
               </TR>
             </TBODY>
