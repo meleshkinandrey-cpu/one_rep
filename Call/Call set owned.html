@@ -11,11 +11,10 @@
    padding: 0;
    width: 100% !important;
    background-color: #f5f5f5;
-   font-family: Arial, Tahoma,  Verdana, sans-serif;
+   
   }
 
   .content-wrapper {
-   font-family: Arial, Tahoma,  Verdana, sans-serif;
    border: 1px solid #dddddd;
    width: 650px;
    background-color: #ffffff;
@@ -40,18 +39,17 @@
 
   .card {
    background: #f8fafc;
-   /* background-color: #eff6fe; */
-   font-size: 13px;
+   font-size: 14px;
    border-radius: 10px;
    border: 1px solid #e2e8f0;
-   /* border: 1px solid #d4e8ff; */
+   
   }
 
   .card-header {
    text-transform: uppercase;
    text-indent: 1px;
    font-weight: 600;
-   font-size: 13px;
+   font-size: 14px;
    padding-left: 15px;
    padding-right: 15px;
    padding-top: 10px;
@@ -61,7 +59,7 @@
 
   .card-body {
    text-indent: 1px;
-   font-size: 13px;
+   font-size: 14px;
    padding-top: 10px;
    padding-left: 15px;
    padding-right: 15px;
@@ -71,7 +69,7 @@
 
   .card-bottom {
    text-indent: 1px;
-   font-size: 13px;
+   font-size: 14px;
    margin-top: 0px;
    padding-top: 8px;
    padding-left: 15px;
@@ -89,7 +87,6 @@
   .divider-blue {
    font-size: 2px;
    padding-bottom: 3px;
-   /*border-bottom: #444 1px dashed;*/
    border-bottom: #b3d1ff 2px solid;
   }
 
@@ -97,13 +94,12 @@
   .divider-grey {
    font-size: 2px;
    padding-bottom: 3px;
-   /*border-bottom: #444 1px dashed;*/
    border-bottom: #dadada 1px solid;
   }
 
   .sign {
    padding-left: 10px;
-   font-size: 13px;
+   font-size: 12px;
    COLOR: #2a5298;
   }
 
@@ -174,7 +170,9 @@
 
        <TR>
         <TD style="PADDING-BOTTOM: 10px; PADDING-TOP: 20px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px">
+
          <!-- Кнопка  -->
+         
          <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
           <TBODY>
            <TR>
@@ -186,11 +184,14 @@
                   style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
                   href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}"><IMG
                    style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"
-                   src="https://helpdesk.stepcon.ru/images/call_mini.png "></A></TD>
+                   src="https://helpdesk.stepcon.ru/images/call_mini.png" alt="Перейти к заявке"></A></TD>
                </TR>
               </TBODY>
              </TABLE>
-             <DIV class=break>&nbsp;</DIV><!-- Заявка -->
+             <DIV class=break>&nbsp;</DIV>
+             
+             <!-- Заявка -->
+
              <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
               <TBODY>
                <TR>
