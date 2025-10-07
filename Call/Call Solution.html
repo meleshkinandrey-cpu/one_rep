@@ -10,11 +10,11 @@
       padding: 0;
       width: 100% !important;
       background-color: #f5f5f5;
-      /* font-family: Arial, Tahoma,  Verdana, sans-serif; */
+      
     }
 
     .content-wrapper {
-      /* font-family:    ; */
+      
       border: 1px solid #dddddd;
       width: 650px;
       background-color: #ffffff;
@@ -26,11 +26,9 @@
 
     .td-grade-block {
       background: #f8fafc;
-      /* background-color: #eff6fe; */
       border-radius: 10px;
       padding-top: 10px;
       padding-bottom: 5px;
-      /* BORDER: #d4e8ff 1px solid; */
       border: 1px solid #e2e8f0;
     }
 
@@ -100,8 +98,7 @@
 
     .card {
       background: #f8fafc;
-      /* background-color: #eff6fe; */
-      font-size: 13px;
+      font-size: 14px;
       border-radius: 10px;
       border: 1px solid #e2e8f0;
       /*border: 1px solid #d4e8ff;*/
@@ -109,7 +106,7 @@
 
       .card-green {
 
-   font-size: 13px;
+   font-size: 14px;
    background-color: #f9fff7;
    border-radius: 10px;
    border: 1px solid #c3e2ca;
@@ -119,7 +116,7 @@
       text-transform: uppercase;
       text-indent: 1px;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 14px;
       padding-left: 15px;
       padding-right: 15px;
       padding-top: 10px;
@@ -128,8 +125,8 @@
     }
 
     .card-body {
-      text-indent: 5px;
-      font-size: 13px;
+      text-indent: 1px;
+      font-size: 14px;
       padding-top: 10px;
       padding-left: 15px;
       padding-right: 15px;
@@ -137,8 +134,8 @@
     }
 
     .card-bottom {
-      text-indent: 5px;
-      font-size: 13px;
+      text-indent: 1px;
+      font-size: 14px;
       margin-top: 0px;
       padding-top: 8px;
       padding-left: 15px;
@@ -153,20 +150,17 @@
     .divider-blue {
       font-size: 3px;
       padding-bottom: 3px;
-      /*border-bottom: #444 1px dashed;*/
       border-bottom: #b3d1ff 2px solid;
     }
 
     .divider-green {
       font-size: 3px;
       padding-bottom: 3px;
-      /*border-bottom: #444 1px dashed;*/
       border-bottom:#c8e6c9 2px solid ; 
     }
      .divider-grey {
       font-size: 3px;
       padding-bottom: 3px;
-      /*border-bottom: #444 1px dashed;*/
       border-bottom:#dadada 1px solid ; 
     }
 
@@ -223,7 +217,10 @@ width="100%" border=0>
             </B>{?Call.CallSummaryName} </DIV></TD></TR>
         <TR>
           <TD 
-          style="PADDING-BOTTOM: 10px; PADDING-TOP: 20px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px"><!-- Кнопки в одной таблице в ряд -->
+          style="PADDING-BOTTOM: 10px; PADDING-TOP: 20px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px">
+          
+          <!-- Кнопки в одной таблице в ряд -->
+          
             <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
               <TBODY>
               <TR>
@@ -233,11 +230,11 @@ width="100%" border=0>
                     <TR>
                       <TD class=pm align=left><A 
                         href="{?Call.WebServerAddress}?callNumber={?Call.NumberString}"><IMG 
-                        src="https://helpdesk.stepcon.ru/images/call_mini.png "></A> 
+                        src="https://helpdesk.stepcon.ru/images/call_mini.png" alt="Перейти к заявке"></A> 
                       </TD>
                       <TD class=pm align=right><A 
                         href="mailto:HelpDesk@stepcon.ru?subject=Восстановление%20работ%20по%20заявке%20IM-CL-28974%20Действие:#Восстановить&amp;body=Комментарий:"><IMG 
-                        src="https://helpdesk.stepcon.ru/images/button_recover.png "></A> 
+                        src="https://helpdesk.stepcon.ru/images/button_recover.png" alt="Восстановить"></A> 
                       </TD></TR></TBODY></TABLE></TD></TR>
               <TR>
                 <TD>
