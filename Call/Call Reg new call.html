@@ -7,7 +7,7 @@
  <META name=GENERATOR content="MSHTML 11.00.10570.1001">
  <STYLE>
   body {
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
    margin: 0;
    padding: 0;
    width: 100% !important;
@@ -16,7 +16,7 @@
   }
 
   .content-wrapper {
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
    border: 1px solid #dddddd;
    width: 650px;
    background-color: #ffffff;
@@ -47,7 +47,7 @@
    background: #f8fafc;
    border-radius: 10px;
    border: 1px solid #e2e8f0;
-   font-size: 13px;
+   font-size: 14px;
   }
 
 
@@ -56,7 +56,7 @@
    text-transform: uppercase;
    text-indent: 3px;
    font-weight: 600;
-   font-size: 13px;
+   font-size: 14px;
    padding-left: 15px;
    padding-right: 15px;
    padding-top: 10px;
@@ -65,7 +65,7 @@
 
   .card-body {
    text-indent: 5px;
-   font-size: 13px;
+   font-size: 14px;
    padding-top: 10px;
    padding-left: 15px;
    padding-right: 15px;
@@ -80,7 +80,7 @@
 
   .card-bottom {
    text-indent: 5px;
-   font-size: 13px;
+   font-size: 14px;
    margin-top: 0px;
    padding-top: 8px;
    padding-left: 15px;
@@ -106,7 +106,7 @@
 
   .sign {
    padding-left: 10px;
-   font-size: 13px;
+   font-size: 12px;
    COLOR: #2a5298;
    padding-bottom: 0;
    margin-bottom: 0;
@@ -220,7 +220,33 @@
                </TR>
               </TBODY>
              </TABLE>
-             <DIV class=break>&nbsp;</DIV><!-- Подпись -->
+<DIV class=break>&nbsp;</DIV>
+  <!-- Дополнительная информация -->
+
+
+             <TABLE class=card cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+               <TR>
+                <TD class=card-header style="COLOR: #2a5298">Дополнительная
+                 информация о заявке
+                 <DIV class=divider-blue>&nbsp;</DIV>
+                </TD>
+               </TR>
+               <TR>
+                <TD class=card-bottom>
+                 <DIV><b>Клиент:</b> {?Call.ClientFullName}</DIV>
+                 <DIV style="MARGIN-TOP: 5px"><b>Должность:</b> {?Call.ClientPositionName}</DIV>
+                 <DIV style="MARGIN-TOP: 5px"><b>Подразделение:</b> {?Call.ClientSubdivisionName}</DIV>
+                 <DIV style="MARGIN-TOP: 5px"><b>Услуга:</b> {?Call.ServiceAttendanceFullName}
+                 </DIV>
+                </TD>
+               </TR>
+              </TBODY>
+             </TABLE>
+              <DIV class=break>&nbsp;</DIV>
+             
+             <!-- Подпись -->
+
              <DIV class=sign>
               <DIV>С уважением,<BR>Служба ИТ поддержки.</DIV>
               <DIV class=break>&nbsp;</DIV>
